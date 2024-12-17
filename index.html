@@ -1,73 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Media Player</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    .player-container {
-      text-align: center;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    video {
-      width: 100%;
-      max-width: 600px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="player-container">
-    <h2>Custom Media Player</h2>
-    <input type="text" id="urlInput" placeholder="Enter media URL (video/audio)">
-    <br>
-    <button onclick="loadMedia()">Play</button>
-    <video id="mediaPlayer" controls></video>
-  </div>
-
-  <script>
-    function loadMedia() {
-      const url = document.getElementById('urlInput').value;
-      const player = document.getElementById('mediaPlayer');
-
-      if (url) {
-        player.src = url;
-        player.style.display = "block"; // Ensure video appears after loading
-      } else {
-        alert('Please enter a valid URL!');
-      }
-    }
-  </script>
-</body>
-</html>
+<section id="movies">
+    <h2>Available Movies</h2>
+    <div class="movie-grid">
+        <div class="movie-card">
+            <img src="movie1.jpg" alt="Movie 1">
+            <h3>Movie Title 1</h3>
+            <p>Genre: Action</p>
+            <video width="100%" controls>
+                <source src="https://ip293178181.ahcdn.com/key=DYYnck7uH1Yg-RqsT6pywg,s=,end=1734393600,limit=3/data=43.153.85.245-dvp/state=Z2CTJAKBACYKow-siKuo/reftag=0201380214/ssd3/21/5/370968565/024/934/047/1080p.h264.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="download/movie1.mp4" class="download-btn">Download</a>
+        </div>
+        <div class="movie-card">
+            <img src="movie2.jpg" alt="Movie 2">
+            <h3>Movie Title 2</h3>
+            <p>Genre: Comedy</p>
+            <video width="100%" controls>
+                <source src="movies/movie2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="<iframe src="https://mega.nz/embed/WYFwQRRC#9bS48SI9HBZu04jCqyOlPsCQ9I-_j3WX0zJPyEMOxN0" width="640" height="360" frameborder="0" allowfullscreen></iframe>" class="download-btn">Download</a>
+        </div>
+    </div>
+</section>
